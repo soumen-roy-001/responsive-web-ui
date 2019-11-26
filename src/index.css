@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url(./assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(./assets/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+body {
+  margin: 0;
+  font-family: "Montserrat-Regular";
+  font-size: 15px;
+}
+
+
+.sidebarItem {
+  display: flex;
+  margin-bottom: 40px;
+}
+.ItemContent {
+  background: #fefffe;
+  box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.15);
+  width: 203px;
+  height: 120px;
+  margin: 8px 0 0 -13px;
+}
+.ItemContentInner {
+  padding: 30px 20px 20px 46px;
+}
+.sidebarItemImg {
+  z-index: 1;
+}
+.sidebarItemImg img {
+  width: 120px;
+  height: 120px;
+}
+.innerContent {
+  padding: 42px 20px 20px 30px;
+}
+.selectedItem {
+  margin-bottom: 30px;
+}
+.sidebarSelected{
+  display: flex;
+  margin-bottom: 40px;
+}
+.sidebarSelected .ItemContent {
+  width: 233px;
+  height: 140px;
+  margin: 0;
+  text-align: left;
+}
+.sidebarSelected .sidebarItemImg img {
+  position: absolute;
+  right: -9px;
+  margin-top: -14px;
+  width: 140px;
+  height: 140px;
+}
+
+.sidebarSelected .sidebarIconImg img {
+  background-image: linear-gradient(-135deg, #deffc9 0%, #a3f8ff 100%);
+  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.15);
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  position: absolute;
+  right: -28px;
+  margin-top: 108px;
+  z-index: 2;
+}
+.selectedItemContent {
+  background: #fefffe;
+  box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.15);
+  width: 233px;
+  height: 140px;
+}
+.itemName {
+  font-family: "Montserrat-Bold";
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 2px;
+  line-height: 28px;
+}
+.itemNameCategory {
+  opacity: 0.5;
+  color: #666666;
+  letter-spacing: 0.47px;
+}
+.itemImage {
+  bottom: 43px;
+  left: 215px;
+  position: absolute;
+}
+.itemNameCategory span {
+  color: #000000;
+  line-height: 19px;
+}
+.selectedItemIcon {
+  background-image: linear-gradient(-135deg, #deffc9 0%, #a3f8ff 100%);
+  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.15);
+  width: 24px;
+  height: 24px;
+  bottom: 85px;
+  padding: 4px;
+  position: absolute;
+  right: -40px;
+}
+
+.main-content {
+ width: 65%;
+ margin-left: 410px;
+}
+
+.element,
+.outer-container {
+  width: 420px;
+  height: 100vh;
+
+}
+
+.outer-container {
+  position: fixed;
+  overflow: hidden;
+  float: left;
+}
+
+.inner-container {
+  position: absolute;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.inner-container::-webkit-scrollbar {
+  display: none;
+}
+.itemList{
+  min-width: 150px;
+  max-width: 380px;
+  background-image: linear-gradient(-180deg, #979697 0%, #74bcf7 100%);
+  width: 380px;
+}
+.rwt__tablist[aria-orientation="vertical"] {
+  border: none !important;
+}
+
+.rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"]:after {
+  border: none !important;
+}
+.rwt__tab{
+  padding: 0 2.6% 0 8% !important;
+}
+
+.imgIcon {
+  position: absolute;
+  right: -20px;
+  margin-top: -18px;
+}
+
+.fadeTop {
+  position: fixed;
+  top: 0px;
+  display: block;
+  width: 380px;
+  height: 100px;
+  background-image: linear-gradient(
+    to bottom,
+    #ad6bff 5%,
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.fadeBottom {
+  position: fixed;
+  bottom: 0px;
+  display: block;
+  width: 380px;
+  height: 100px;
+  background-image: linear-gradient(to top, #a3f8ff 5%, rgba(255, 255, 255, 0));
+}
+
+/* Small Devices, Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .itemList,
+  .fadeTop,
+  .fadeBottom{
+    width: 210px;
+  }
+  .element, .outer-container{
+    width: 250px;
+  }
+  .main-content{
+    margin-left: 230px;
+    width:70%;
+  }
+  .sidebarSelected .ItemContent,
+  .itemNameCategory{
+    visibility: hidden;
+  }
+  .rwt__tab {
+    padding: 0 2.6% 0 35px !important;
+  }
+  .ItemContent {
+    width: 120px;
+    height: 120px;
+    margin: 26px 0 0 -109px;
+  }
+  .ItemContentInner{
+    padding: 0
+  }
+  .itemName {
+    font-size: 11px;
+    letter-spacing: 2.2px;
+    line-height: 14px;
+    margin-top: 100px;
+  }
+  .sidebarSelected{
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobiles */
+@media (min-width: 320px) and (max-width: 425px) {
+  .itemList,
+  .fadeTop,
+  .fadeBottom{
+    width: 150px;
+  }
+  .element, .outer-container{
+    width: 190px;
+  }
+  .main-content{
+    margin-left: 160px;
+    width:80%;
+  }
+  .sidebarSelected{
+    margin-bottom: 0px;
+  }
+  .sidebarSelected .ItemContent,
+  .itemNameCategory{
+    visibility: hidden;
+  }
+  .rwt__tab {
+    padding: 0 2.6% 0 20px !important;
+  }
+  .ItemContent {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 -90px;
+}
+  .ItemContentInner{
+    padding: 0
+  }
+  .itemName {
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 13px;
+    margin-top: 84px;
+  }
+  .sidebarItemImg img {
+    width: 100px;
+    height: 100px;
+  }
+  .sidebarSelected .sidebarItemImg img {
+    width: 120px;
+    height: 120px;
+  }
+  .sidebarSelected .sidebarIconImg img{
+    margin-top: 90px;
+  }
+  .MuiTableCell-body{
+    padding:10px !important;
+  }
+  .WithStyles\(ForwardRef\(Switch\)\)-root-75{
+    margin-top: -100px !important;
+  }
+}

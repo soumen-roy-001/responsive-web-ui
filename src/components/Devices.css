@@ -1,0 +1,115 @@
+.devices {
+  color: #000;
+  font-size: 48px;
+  font-family: Montserrat-Bold;
+  letter-spacing: 8.4px;
+}
+.sidebarIconImg img {
+    background-image: linear-gradient(-135deg, #deffc9 0%, #a3f8ff 100%);
+    box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.15);
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -72px;
+    z-index: 1;
+  }
+  .shades{
+    color: #AC6CFF;
+    display: flex;
+    font-size: 15px;
+    font-family: Montserrat-Bold;
+    flex-direction: row;
+    letter-spacing: 1.5px;
+}
+
+.shades:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #AC6CFF;
+    margin: auto 10px;
+  }
+.selectedRow{
+  background-image: linear-gradient(-135deg, #AD6BFF 0%, #74BCF7 100%);
+box-shadow: 0 20px 20px 0 rgba(0,0,0,0.15);
+
+}
+.selectedRow td{
+  color: #fff !important;
+}
+.MuiTableCell-root{
+  border:none !important;
+}
+tr.MuiTableRow-root:hover{
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.15);
+}
+
+
+.barOverflow{ /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 260px;
+  height: 130px; /* Half circle (overflow) */
+  margin-bottom: -14px; /* bring the numbers up */
+}
+.bar{
+  position: absolute;
+  top: 0; left: 0;
+  width: 260px;
+  height: 260px; /* full circle! */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 6px solid #E5E5E5;     /* half gray, */
+  border-bottom-color:#AD6BFF ;  /* half azure */
+  border-right-color: #AD6BFF ;
+  transform: rotate(162deg);
+  -webkit-transition:200ms linear;
+  -moz-transition:200ms linear;
+  -o-transition:200ms linear;
+  -ms-transition:200ms linear;
+  transition:200ms linear;
+}
+
+#percentageVal{
+  font-family: Montserrat-Bold;
+  font-size: 40px;
+  color: #000000;
+  margin-top: 65px;
+  letter-spacing: 6.4px;
+  text-align: center;
+text-shadow: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+/* .shadeItems{
+  height:78px
+} */
+
+
+/* Mobiles */
+@media (min-width: 320px) and (max-width: 425px) {
+  .devices {
+    font-size: 40px;
+    letter-spacing: 7px;
+    margin-left: -110px;
+    position: relative;
+    line-height: 49px;
+  }
+  .makeStyles-plusIcon-2{
+    background-image:none !important;
+    margin-top: -27px !important;
+  }
+  .barOverflow{
+    width: 155px;
+    height: 77.5px;
+  }
+  .bar{
+    width: 155px;
+    height: 155px;
+  }
+  #percentageVal {
+    font-size: 36px;
+    margin-top: 30px;
+    letter-spacing: 5.7px;
+  }
+}
